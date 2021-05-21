@@ -92,19 +92,9 @@ img::-moz-selection {
   padding: 20px 40px;
 }
 
-.p-large {
-  font-size: 22px;
-  margin-top: 22px
-}
-
-.space-below {
-  font-size: 22px;
-  margin-bottom: 50px
-}
-
 .btn-primary {
-  background-color: #10E2CE;
-  border-color: #10E2CE;
+  background-color: #fed136;
+  border-color: #fed136;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
