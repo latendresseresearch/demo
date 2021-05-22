@@ -32,6 +32,10 @@
     if (locale) {
       $.i18n().locale = locale;
     }
+
+    $('body').i18n();
+    console.log($.i18n( 'psi-link' ))
+    $("a[id=psi-link]").attr('href', $.i18n( 'psi-link' ))
   };
 
   $.i18n().load( {
@@ -47,7 +51,9 @@
       'moms-wellbeing': 'Mom’s Wellbeing',
       'national-resources': 'National Resources',
       'study-team': 'Study Team',
+      'switch-button': 'Español',
       'graduate-research-assistant': 'Graduate Research Assistant',
+      'psi-link': 'https://www.postpartum.net',
       'research-assistants': 'Research Assistants:',
       'ryoko-phone': 'Ryoko (English only): 385-444-0511',
       'therapist': 'Therapist',
@@ -100,6 +106,7 @@
       'current-studies': 'ESTUDIOS ACTUALES',
       'did-you-know': '¿Sabía usted que?',
       'for-emergencies': 'Para Emergencias',
+      'graduate-research-assistant': 'Asistente de Investigacion',
       'home': 'INICIO',
       'latendresse-research': 'Investigaciones Latendresse',
       'latendresse-research-2021': 'Investigaciones Latendresse 2021',
@@ -108,9 +115,10 @@
       'it-is-more-common': '• Es más común que el parto prematuro, la diabetes o la presión arterial alta.',
       'kritzia-phone': 'Kritzia (Espanol o Ingles): 385-444-1022',
       'study-team': 'EQUIPO DE ESTUDIO',
-      'graduate-research-assistant': 'Asistente de Investigacion',
+      'switch-button': 'English',
       'research-assistants': 'Asistente de Investigacion:',
       'ryoko-phone': 'Ryoko (solo Ingles): 385-444-0511',
+      'psi-link': 'https://www.postpartum.net/en-espanol/',
       'therapist': 'Terapeuta/Terapista',
       'this-is-ppd': 'Esto a menudo es conocido como depresión y ansiedad posparto o perinatal. Si no se tratan, la depresión y la ansiedad pueden contribuir a complicaciones de salud tanto para la madre como para el bebé. Los recursos a continuación pueden ayudarla a encontrar apoyo durante su embarazo y después del nacimiento. Haga clic en el enlace de abajo para saber cómo está usted:',
       'women-experience-sadness': '• 1 de cada 5 mujeres experimenta tristeza, ansiedad y estrés durante el embarazo o después del nacimiento de un bebé.',
@@ -149,12 +157,16 @@
       History.Adapter.bind(window, 'statechange', function(){
         set_locale_to(url('?locale'));
       });
-      $('.switch-locale').on('click', 'a', function(e) {
-        e.preventDefault();
-        History.pushState(null, null, "?locale=" + $(this).data('locale'));
-        $('body').i18n();
       });
-      });
+
   $('body').i18n();
 
 })(jQuery); // End of use strict
+
+function switchLocale(a) { 
+  if ( $.i18n().locale === 'en' ) {
+    a.href="?locale=es"
+  } else {
+    a.href="?locale=en"
+  }
+}
