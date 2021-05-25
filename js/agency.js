@@ -34,8 +34,10 @@
     }
 
     $('body').i18n();
-    console.log($.i18n( 'psi-link' ))
     $("a[id=psi-link]").attr('href', $.i18n( 'psi-link' ))
+    $("a[id=tepop-link]").attr('href', $.i18n( 'tepop-link' ))
+    $("img[id=tepop-img]").attr('src', $.i18n( 'tepop-img' ))
+    $("a[id=national-suicide-prevention-line-link]").attr('href', $.i18n( 'national-suicide-prevention-line-link' ))
   };
 
   $.i18n().load( {
@@ -54,6 +56,8 @@
       'switch-button': 'Español',
       'graduate-research-assistant': 'Graduate Research Assistant',
       'psi-link': 'https://www.postpartum.net',
+      'tepop-link': 'img/studies/TEPOP.pdf',
+      'tepop-img': 'img/studies/tepop-front.jpg',
       'research-assistants': 'Research Assistants:',
       'ryoko-phone': 'Ryoko (English only): 385-444-0511',
       'therapist': 'Therapist',
@@ -99,8 +103,17 @@
       'the-emily-effect-description': "The Emily Effect Foundation provides resources to families and support for women suffering from perinatal mood disorders.",
       'team-study-coordinator': 'Study Coordinator',
       'team-professor-applied-statistics': 'Professor and Director of Applied Statistics',
-      'team-group-facilitator': 'Group Facilitator'
+      'team-group-facilitator': 'Group Facilitator',
 
+      'national-suicide-prevention-line': 'National Suicide Prevention Liveline',
+      'national-suicide-prevention-line-link': 'https://suicidepreventionlifeline.org/',
+      'u-of-u-crisis-line': 'University of Utah Crisis Line',
+      'multilingual-options-avaliable': '(multilingual options avaliable)',
+ 
+      'postpartum-support-international': 'Postpartum Support International',
+      'postpartum-support-international-utah': 'Postpartum Support International Utah',
+      'the-emily-effect': 'The Emily Effect',
+      'the-emily-effect-description': "The Emily Effect Foundation provides resources to families and support for women suffering from perinatal mood disorders.",
     },
     'es': {
       'current-studies': 'ESTUDIOS ACTUALES',
@@ -119,6 +132,8 @@
       'research-assistants': 'Asistente de Investigacion:',
       'ryoko-phone': 'Ryoko (solo Ingles): 385-444-0511',
       'psi-link': 'https://www.postpartum.net/en-espanol/',
+      'tepop-link': 'img/studies/TEPOP-es.pdf',
+      'tepop-img': 'img/studies/tepop-front-es.jpg',
       'therapist': 'Terapeuta/Terapista',
       'this-is-ppd': 'Esto a menudo es conocido como depresión y ansiedad posparto o perinatal. Si no se tratan, la depresión y la ansiedad pueden contribuir a complicaciones de salud tanto para la madre como para el bebé. Los recursos a continuación pueden ayudarla a encontrar apoyo durante su embarazo y después del nacimiento. Haga clic en el enlace de abajo para saber cómo está usted:',
       'women-experience-sadness': '• 1 de cada 5 mujeres experimenta tristeza, ansiedad y estrés durante el embarazo o después del nacimiento de un bebé.',
@@ -128,7 +143,7 @@
       'tepop-study-description-1': 'La depresión y la ansiedad durante y después del embarazo pueden provocar problemas de salud para la madre y / o el bebé. Este estudio explora una forma posible de reducir los síntomas: un grupo de apoyo virtual que enseña habilidades sobre cómo mejorar la salud mental.',
       'tepop-study-description-2': 'Nuestro equipo de investigación espera saber si los grupos virtuales, realizados mediante una plataforma de telesalud segura, son eficaces para reducir los síntomas. También queremos entender si los grupos de telesalud son más accesibles para las mujeres que los grupos presenciales, ya que las mujeres pueden asistir desde la comodidad de su propio hogar.',
       'tepop-download-trifold': 'Descargue TEPOP Tri-Fold para obtener más información',
-      'tepop-for-more-info': 'For more info: tepop@utah.edu',
+      'tepop-for-more-info': 'Para mas informacion: tepop@utah.edu',
 
       'team-our-amazing-team': 'NUESTRO MARAVILLOSO EQUIPO',
       'team-principle-investigator': 'Investigadora Directora Principal',
@@ -150,7 +165,21 @@
       'team-professor': 'Profesor',
       'team-department-behavioral-sciences-health-education': 'Departamento de Ciencias Comportamentales e Educacion de Salud',
       'team-rollins-school-public-health': 'Escuela de Salud Publico Rollins',
-      'team-emory-university': 'Universidad de Emory'
+      'team-emory-university': 'Universidad de Emory',
+
+      'advisor': 'Tutor',
+      'start-survey': 'Comenzar Encuesta',
+      'interested-in-a-study': '¿Está interesada en un estudio de salud mental perinatal y posparto?',
+      'maternal-mental-health-resources': 'RECURSOS DE SALUD MENTAL MATERNA',
+      'postpartum-support-international-description': "Postpartum Support International Utah (PSI Utah) reúne a proveedores, profesionales y madres con el objetivo de mejorar la prevención, detección y tratamiento de las condiciones de salud mental materna.",
+      'team-study-coordinator': 'Coordinador de estudio',
+      'team-professor-applied-statistics': 'Profesor y Director de Estadística Aplicada',
+      'team-group-facilitator': 'Facilitador de grupo',
+
+      'national-suicide-prevention-line': 'Línea Nacional de Prevención del Suicidio',
+      'national-suicide-prevention-line-link': 'https://suicidepreventionlifeline.org/help-yourself/en-espanol/ ',
+      'u-of-u-crisis-line': 'Línea de crisis de la Universidad de Utah',
+      'multilingual-options-avaliable': '(opción multilingüe disponible)',
     }
   } ).done(function() {
       set_locale_to(url('?locale'));
