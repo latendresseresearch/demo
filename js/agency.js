@@ -109,8 +109,9 @@
       'national-suicide-prevention-line-link': 'https://suicidepreventionlifeline.org/',
       'u-of-u-crisis-line': 'University of Utah Crisis Line',
       'multilingual-options-avaliable': '(multilingual options avaliable)',
- 
-      'postpartum-support-international': 'Postpartum Support International',
+      'english-only': '(english only)',
+
+      'postpartum-support-international': 'Postpartum Support International (PSI)',
       'postpartum-support-international-utah': 'Postpartum Support International Utah',
       'the-emily-effect': 'The Emily Effect',
       'the-emily-effect-description': "The Emily Effect Foundation provides resources to families and support for women suffering from perinatal mood disorders.",
@@ -180,6 +181,7 @@
       'national-suicide-prevention-line-link': 'https://suicidepreventionlifeline.org/help-yourself/en-espanol/ ',
       'u-of-u-crisis-line': 'Línea de crisis de la Universidad de Utah',
       'multilingual-options-avaliable': '(opción multilingüe disponible)',
+      'english-only': '(solo inglés)',
     }
   } ).done(function() {
       set_locale_to(url('?locale'));
